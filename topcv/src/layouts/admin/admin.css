@@ -1,0 +1,41 @@
+/* Tổng wrapper nằm giữa Header và Footer */
+.admin-wrapper {
+  display: flex;
+  min-height: calc(100vh - 80px); /* giả định Header + Footer cao khoảng 60px */
+  background-color: #f5f6fa;
+}
+
+/* Sidebar bên trái */
+.admin-sidebar {
+  width: 220px;
+  background-color: #2d3436;
+  color: white;
+  padding: 20px 0;
+}
+
+/* Menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  padding: 14px 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #e8f3ff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar-item:hover {
+  background-color: #636e72;
+}
+
+/* Nội dung chính bên phải */
+.admin-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid red;
+}

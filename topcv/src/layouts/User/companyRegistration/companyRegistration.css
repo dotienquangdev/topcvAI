@@ -1,0 +1,80 @@
+.companyRegister {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+
+.companyRegister-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.userInputRegister {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+textarea.userInputRegister {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.companyRegister-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.companyRegister-button button {
+  padding: 12px 24px;
+  background: #00b14f;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.companyRegister-button button:hover {
+  background: #009245;
+}
+
+.error-text {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+}

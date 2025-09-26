@@ -1,0 +1,22 @@
+# Node modules (bắt buộc phải ignore)
+node_modules/
+
+# Environment variables (chứa thông tin nhạy cảm)
+.env
+
+# VSCode workspace settings (không cần sync)
+.vscode/
+
+# Mac system files (nếu dùng macOS)
+.DS_Store
+
+# npm log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS log file
+Thumbs.db
+
+# Optional: nếu bạn không muốn commit README ban đầu
+# readme.md

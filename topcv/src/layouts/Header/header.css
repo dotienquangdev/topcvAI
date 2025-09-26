@@ -1,0 +1,166 @@
+.topcv_jobs-item {
+  display: flex;
+}
+.topCV_img {
+  left: 0;
+  margin-left: 10px;
+}
+.topCV_img img {
+  width: 170px;
+  height: 70px;
+}
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+.header-topcv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topcv_jobs-item {
+  margin-left: 10px;
+}
+.topcv_jobs-item span {
+  font-weight: 500;
+  z-index: 100;
+  /* font-size: 16px; */
+  margin-right: 5px;
+}
+.topcv_jobs-item:hover {
+  color: #ffffff;
+}
+.topCV_jobs {
+  width: 656px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 72px;
+  /* border: 1px solid yellow; */
+}
+.topCV_user {
+  width: 316px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chevron-down {
+  display: inline-block;
+}
+
+.topcv_jobs-item .chevron-down {
+  transition: transform 0.3s ease;
+}
+
+.topcv_jobs-item {
+  position: relative;
+}
+
+/* Ẩn menu con */
+.topcv_jobs-dropdown {
+  border-radius: 20px;
+  width: 600px;
+  height: 330px;
+  display: none;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(190, 190, 190);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 10px;
+  min-width: 200px;
+}
+
+/* Hover thì hiển thị */
+/* .topcv_jobs-item:hover .topcv_jobs-dropdown {
+  display: flex;
+  justify-content: space-around;
+} */
+.nav-item {
+  margin-top: 10px;
+  display: flex;
+}
+.nav-child {
+  border-radius: 10px;
+  width: 100%;
+  margin: 5px;
+}
+.nav-childs {
+  border-left: 1px solid rgb(232, 232, 232);
+  margin-right: 100px;
+  right: 0;
+}
+
+.nav-sub {
+  /* margin: 10px; */
+  width: 200px;
+}
+.nav-subs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  margin: 5px;
+}
+.dataCategoriesText {
+  display: flex;
+  width: 160px;
+}
+.nav-icon {
+  color: #000000;
+  margin: 3px;
+  display: flex;
+}
+.dataCategories {
+  font-size: 14px;
+}
+.nav-category-item {
+  width: 200px;
+  color: #000000;
+  height: 30px;
+}
+.dataCategories-item:hover {
+  background-color: rgb(234, 234, 234);
+}
+
+.light {
+  background-color: #000000;
+}
+.dataCategories-item {
+  border-radius: 10px;
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+}
+.nav-iconItems {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  animation: slideTop 1s ease forwards;
+  margin-top: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  transition-delay: 0.1s;
+}
+.nav-iconItems:hover {
+  color: #23bc67;
+  background-color: #f3f3f3;
+}
+.nav-icont_text {
+  font-size: 14px;
+  width: 200px;
+}
+
+.nav-icon.nav-iconItems .nav-icont_textP i {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.5s ease;
+}
+
+.nav-icon.nav-iconItems:hover .nav-icont_textP i {
+  opacity: 1;
+  transform: translateX(0);
+}

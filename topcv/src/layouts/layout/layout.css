@@ -1,0 +1,13 @@
+/* layout.css */
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.layout-container {
+}

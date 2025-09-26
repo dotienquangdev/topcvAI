@@ -1,0 +1,89 @@
+/* Toàn bộ nền */
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 16px;
+}
+
+/* Container */
+.authContainer {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Bên trái */
+.authLeft {
+  flex: 1;
+  background: linear-gradient(135deg, #00b14f, #00d084);
+  color: #fff;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.authLogo {
+  max-width: 150px;
+  margin-bottom: 16px;
+}
+
+.authLeft h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.authLeft p {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.authBtn {
+  margin-top: 20px;
+  display: inline-block;
+  background: #fff;
+  color: #00b14f;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.authBtn:hover {
+  background: #f1f1f1;
+}
+
+/* Bên phải */
+.authRight {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .authContainer {
+    flex-direction: column;
+  }
+
+  .authLeft {
+    display: none; /* Ẩn logo + text trên mobile */
+  }
+
+  .authRight {
+    padding: 24px;
+  }
+}

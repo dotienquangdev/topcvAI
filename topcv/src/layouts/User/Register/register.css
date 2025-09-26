@@ -1,0 +1,134 @@
+.userRegister {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.userRegister .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.userRegister-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.userRegister-form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.userInputRegister {
+  padding: 10px 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+  outline: none;
+  transition: 0.2s;
+}
+
+.userInputRegister:focus {
+  border-color: #00b14f;
+  box-shadow: 0 0 0 2px rgba(0, 177, 79, 0.2);
+}
+
+.error-text {
+  color: #e63946;
+  font-size: 13px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.userRegister-button {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.userRegister-button button {
+  padding: 12px 20px;
+  width: 100%;
+  background: linear-gradient(90deg, #00b14f, #00d162);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.userRegister-button button:hover {
+  background: linear-gradient(90deg, #00a145, #00b14f);
+}
+
+.userRegister-button span {
+  font-size: 13px;
+  color: #555;
+}
+
+.userRegister-button span a {
+  color: #00b14f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.userRegister-button span a:hover {
+  color: #008f3a;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 
+.userRegister-otp {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.userRegister-otp span {
+  width: 140px;
+  font-size: 11px;
+  margin-left: 290px;
+  margin-top: -45px;
+  color: #555;
+}
+
+.userRegister-otp span p {
+  font-size: 11px;
+  background-color: #fff;
+  color: #00b14f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.userRegister-otp span p:hover {
+  background-color: #fff;
+  color: #008f3a;
+  text-decoration: underline;
+} */

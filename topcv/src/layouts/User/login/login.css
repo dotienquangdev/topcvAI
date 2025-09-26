@@ -1,0 +1,113 @@
+/* căn giữa toàn trang */
+.loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+/* khung form */
+.userLogin {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.userLogin h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* input group */
+.userInput {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.userInput label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #fafafa;
+}
+
+.inputWrapper i {
+  color: #888;
+  margin-right: 8px;
+}
+
+.inputWrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+}
+
+.inputWrapper input::placeholder {
+  color: #aaa;
+}
+
+.errorMsg {
+  font-size: 13px;
+  color: red;
+  margin-top: -8px;
+}
+
+/* button */
+.userButton button {
+  width: 100%;
+  padding: 12px;
+  background: #00b14f;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.userButton button:hover {
+  background: #009944;
+}
+
+/* link */
+.userButton .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.userButton .links a {
+  color: #00b14f;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.userButton .links a:hover {
+  text-decoration: underline;
+}

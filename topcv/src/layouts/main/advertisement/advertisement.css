@@ -1,0 +1,38 @@
+.advers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.adver-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 951px; /* 307 * 3 */
+  overflow: hidden;
+}
+
+.adver-slider {
+  display: flex;
+  transition: transform 0.9s ease-in-out;
+}
+
+.adver-item {
+  min-width: 307px;
+  margin: 0 5px;
+  flex-shrink: 0;
+}
+
+.adver-item img {
+  width: 307px;
+  height: 207px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+button {
+  padding: 6px 12px;
+  font-size: 18px;
+  cursor: pointer;
+}

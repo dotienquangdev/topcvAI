@@ -1,0 +1,80 @@
+.job {
+  background-color: #ffffff;
+  width: 375px;
+  height: 120px;
+  border-radius: 10px;
+}
+.job:hover {
+  border: 1px solid red;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.job_item {
+  width: 375px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.job_item:hover .job-description {
+  color: #00b14f;
+}
+.companie-img {
+  width: 55px;
+  height: 55px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 50%;
+  padding: 2px;
+  margin: 5px;
+}
+.job-info {
+  display: block;
+  border-radius: 15px;
+  width: 280px;
+  height: 24px;
+}
+
+.job-categoriesName {
+  width: 100%;
+  margin-top: -17px;
+  height: 20px;
+  margin-left: 0;
+  font-size: 15px;
+  color: #d32e2e;
+  font-weight: 550;
+}
+
+.job-name {
+  margin-top: -7px;
+  width: 280px;
+  font-size: 12px;
+  color: black;
+  font-weight: 500;
+  margin-left: 0px;
+}
+.job-name:hover {
+  font-size: 13px;
+}
+.job-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.job-size {
+  color: black;
+  font-size: 12px;
+  width: 150px;
+  margin: 5px;
+}
+.job-many {
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.job-textItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

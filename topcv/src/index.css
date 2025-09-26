@@ -1,0 +1,454 @@
+/* ===========================
+   GLOBAL RESET + BASE
+   =========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  color: rgb(34, 34, 34);
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Remove default link decoration but keep focus visible */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus {
+  outline: 3px solid rgba(197, 244, 39, 0.25);
+  outline-offset: 2px;
+}
+
+/* ===========================
+   THEME VARIABLES
+   =========================== */
+:root {
+  /* Primary palette */
+  --primary: #6b4226; /* deep brown main */
+  --accent: #c5f427; /* bright lime/yellow accent */
+  --primary-700: #5a391f;
+  --primary-300: #a67a59;
+
+  /* Neutrals */
+  --bg: #faf9f7;
+  --card: #ffffff;
+  --muted: #7a7a7a;
+  --line: #ece7e2;
+  --danger: #e03e3e;
+  --success: #2a9d8f;
+
+  /* Typography */
+  --font-base: 16px;
+  --radius: 12px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(13, 13, 13, 0.12);
+
+  /* Layout */
+  --container-max: 1200px;
+  --gutter: 1.25rem;
+}
+
+/* Responsive tune */
+@media (max-width: 768px) {
+  :root {
+    --gutter: 0.9rem;
+  }
+}
+
+/* ===========================
+   LAYOUT CONTAINERS
+   =========================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* Simple grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--gutter)) 0 0 calc(-1 * var(--gutter));
+}
+.col {
+  padding: var(--gutter) 0 0 var(--gutter);
+  flex: 1 1 0%;
+}
+
+/* Column helpers for common sizes */
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+@media (max-width: 768px) {
+  .col-6,
+  .col-4,
+  .col-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0 0 0.5rem 0;
+  line-height: 1.15;
+  color: var(--primary-700);
+}
+h1 {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.125rem;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+/* small utility text */
+.lead {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+/* ===========================
+   NAV / HEADER
+   =========================== */
+.header {
+  background: linear-gradient(180deg, rgba(107, 66, 38, 0.03), transparent 60%);
+  backdrop-filter: blur(0.2px);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 80;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem var(--gutter);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+}
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.nav a {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  color: var(--primary-700);
+  font-weight: 600;
+}
+.nav a:hover {
+  background: rgba(107, 66, 38, 0.04);
+}
+
+/* Mobile menu (simple) */
+.menu-toggle {
+  display: none;
+}
+@media (max-width: 880px) {
+  .nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+/* ===========================
+   HERO / BANNER
+   =========================== */
+.hero {
+  padding: 3.25rem 0;
+  background: linear-gradient(
+    180deg,
+    rgba(197, 244, 39, 0.06),
+    rgba(107, 66, 38, 0.02)
+  );
+  border-bottom: 1px solid var(--line);
+}
+.hero .title {
+  font-size: 2.3rem;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+.hero .subtitle {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ===========================
+   CARDS
+   =========================== */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+  border: 1px solid transparent;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(107, 66, 38, 0.06);
+}
+.card .card-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card .card-body {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  text-decoration: none;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn:focus {
+  outline: 3px solid rgba(197, 244, 39, 0.2);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--primary), var(--primary-700));
+  color: white;
+  box-shadow: 0 6px 18px rgba(107, 66, 38, 0.12);
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--primary-300);
+  color: var(--primary-700);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--primary-700);
+  padding: 0.4rem 0.6rem;
+}
+
+/* Small button variants */
+.btn-sm {
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Accent button */
+.btn-accent {
+  background: linear-gradient(180deg, var(--accent), #b9d927);
+  color: #0b0b0b;
+  font-weight: 800;
+}
+
+/* ===========================
+   FORMS
+   =========================== */
+.input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: white;
+  font-size: 0.95rem;
+  transition: box-shadow 0.12s ease, border-color 0.12s ease;
+}
+.input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-300);
+  box-shadow: 0 6px 16px rgba(107, 66, 38, 0.06);
+}
+
+.form-row {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.form-row .col {
+  padding: 0;
+}
+
+/* ===========================
+   TABLES
+   =========================== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.table th,
+.table td {
+  padding: 0.75rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+.table thead th {
+  background: rgba(107, 66, 38, 0.03);
+  color: var(--primary-700);
+}
+
+/* ===========================
+   UTILITIES
+   =========================== */
+.u-center {
+  text-align: center;
+}
+.u-right {
+  text-align: right;
+}
+.badge {
+  display: inline-block;
+  padding: 0.28rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.badge-success {
+  background: rgba(42, 157, 143, 0.12);
+  color: var(--success);
+}
+.badge-danger {
+  background: rgba(224, 62, 62, 0.08);
+  color: var(--danger);
+}
+
+/* Spacing shortcuts */
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mt-3 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  background: linear-gradient(180deg, transparent, rgba(107, 66, 38, 0.01));
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ===========================
+   SMALL SCREEN ADJUSTMENTS
+   =========================== */
+@media (max-width: 560px) {
+  .hero {
+    padding: 2rem 0;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .brand img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* ===========================
+   ACCESSIBILITY TIP
+   =========================== */
+/* prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

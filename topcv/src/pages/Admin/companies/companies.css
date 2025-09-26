@@ -1,0 +1,148 @@
+.companiesAdmin {
+}
+.companiesAdmin-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(224, 255, 231);
+  margin: 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.companiesAdmin-img {
+  width: 65px;
+  height: 65px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
+}
+.item-title {
+  width: 300px;
+}
+.item {
+  margin-left: 20px;
+}
+.btn-item button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #303030;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-item {
+  display: flex;
+  justify-content: flex-end; /* đưa các nút sang bên phải */
+  gap: 8px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #8ffc9c;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-numbers button.active {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Lớp nền mờ */
+.edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.edit-popup {
+  background: white;
+  padding: 24px 32px;
+  border-radius: 12px;
+  width: 800px; /* rộng hơn để đủ chỗ cho 2 cột */
+  max-width: 95%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-popup h2 {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.edit-popup form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.edit-popup label {
+  font-weight: 600;
+}
+
+.edit-popup input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+.popup-detail p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+.popup-detail strong {
+  display: inline-block;
+  width: 140px;
+}
+.edit-popup form {
+  flex-wrap: wrap;
+  display: flex;
+}
+.edit-popup form label {
+  width: 180px;
+}
+.edit-popup {
+  width: 100%;
+}
+.edit-overlay {
+  width: 100%;
+}
+.companies-item {
+  display: flex;
+  width: 100%;
+}
+.companies-item input {
+  width: 100%;
+}

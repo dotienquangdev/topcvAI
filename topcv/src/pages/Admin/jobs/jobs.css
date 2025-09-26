@@ -1,0 +1,228 @@
+.jobsAdmin {
+}
+.jobsAdmin-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: bisque;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.jobsAdmin-img {
+  width: 65px;
+  height: 65px;
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
+}
+.item-title {
+  width: 300px;
+}
+.item {
+  margin-left: 20px;
+}
+.btn-item button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #303030;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-item {
+  display: flex;
+  justify-content: flex-end; /* đưa các nút sang bên phải */
+  gap: 8px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #8ffc9c;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-numbers button.active {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Lớp nền mờ */
+.edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.edit-popup {
+  background: white;
+  padding: 24px 32px;
+  border-radius: 12px;
+  width: 800px; /* rộng hơn để đủ chỗ cho 2 cột */
+  max-width: 95%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-popup h2 {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.edit-popup form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.edit-popup label {
+  font-weight: 600;
+}
+
+.edit-popup input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+.popup-detail p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+.popup-detail strong {
+  display: inline-block;
+  width: 140px;
+}
+.logoURLadd {
+  font-size: 10px;
+}
+
+/* Overlay phủ mờ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* mờ nền */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Khung modal */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px; /* ✅ Giới hạn chiều rộng */
+  width: 90%; /* responsive trên mobile */
+  max-height: 80vh; /* ✅ Giới hạn chiều cao */
+  overflow-y: auto; /* ✅ Cuộn nếu nội dung quá dài */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form input */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content input,
+.modal-content select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Nút bấm */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background: #28a745;
+  color: white;
+}
+
+.modal-buttons button:last-child {
+  background: #dc3545;
+  color: white;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Nút thêm mới */
+.btn-add {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #218838;
+}
+
+.formAddJobs {
+  display: flex;
+  flex-wrap: wrap;
+}
