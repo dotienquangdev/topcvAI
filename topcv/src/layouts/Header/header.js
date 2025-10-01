@@ -211,7 +211,7 @@ function Header() {
               {/* popup settings hiển thị job ứng tuyển */}
               {isSettingsOpen && (
                 <div className="user-settings">
-                  <h4>Lịch sử nạp tiền:</h4>
+                  <h4>Liịch sử nạp tiền:</h4>
                   <h4>Công việc đã ứng tuyển:</h4>
                   {userJobs.length > 0 ? (
                     userJobs.map((job) => (
